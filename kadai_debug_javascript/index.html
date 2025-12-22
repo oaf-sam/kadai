@@ -77,6 +77,7 @@
 
         // カウントダウンを開始する関数
         function startCountdown() {
+            isPaused = false;
             let minutes = document.getElementById('minutes').value || 0;
             let seconds = document.getElementById('seconds').value || 0;
             let timeLeft = (minutes * 60) + parseInt(seconds);
