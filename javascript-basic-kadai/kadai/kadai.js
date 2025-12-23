@@ -1,8 +1,11 @@
-// id="text" の要素と id="btn" の要素を取得して定数に代入
+// 要素を取得
 const text = document.getElementById('text');
 const btn  = document.getElementById('btn');
 
-// ボタンがクリックされたときに文字を変更
+// ボタンクリックで2秒後にテキストを書き換え
 btn.addEventListener('click', () => {
-  text.textContent = 'ボタンをクリックしました！';
+  // 2000ミリ秒 = 2秒
+  setTimeout(() => {
+    text.textContent = '2秒経ったので書き換えました！';
+  }, 2000);
 });
