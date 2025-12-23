@@ -1,13 +1,8 @@
-const holidays = ["正月", "成人の日", "建国記念日", "天皇誕生日", "春分の日", "昭和の日", "憲法記念日", "みどりの日", "こどもの日", "海の日", "山の日", "敬老の日", "秋分の日", "スポーツの日", "文化の日", "勤労感謝の日"]
+// 今日の日付を「YYYY年M月D日」の形式でコンソールに出力する
+const today = new Date();
 
-// for文の場合
-for (let i = 0; i < holidays.length; i++) {
-    console.log(holidays[i]);
-}
+const year  = today.getFullYear();
+const month = today.getMonth() + 1; // 月は0始まりのため+1
+const date  = today.getDate();
 
-// while文の場合
-let index = 0;
-while (index < holidays.length) {
-    console.log(holidays[index]);
-    index++;
-}
+console.log(`${year}年${month}月${date}日`);
